@@ -44,6 +44,35 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
+  
+  for(int i = 0 ; i < 9 ; i++){
+    for(int k = 0 ; k < 9 ; k++){
+      int contFilas = 0;
+      int contCol = 0;
+      int contSubMatrix = o;
+
+      for(int m = 0 ; m < 9 ; m++){
+
+        if(n->sudo[i][m] == k){
+          contFilas++;
+          if(contFilas > 1) return 0;
+        }
+
+        if(n->sudo[i][m] == k){
+          contCol++;
+          if(contCol > 1) return 0;
+        }
+
+        int filaSubMatrix (i / 3) * 3 + m / 3;
+        int colSubMatrix = (1 % 3) * 3 + m% 3
+
+        if(n->sudo[filaSubMatrix][colSubMatrix] == k){
+          contSubMatrix++;
+          if(contSubMatrix > 1) return 0;
+        }
+      }
+    }
+  } 
 
     return 1;
 }
