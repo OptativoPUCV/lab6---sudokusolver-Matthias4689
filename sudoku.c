@@ -58,7 +58,7 @@ int is_valid(Node* n){
           if(contFilas > 1) return 0;
         }
 
-        if(n->sudo[i][m] == k){
+        if(n->sudo[m][i] == k){
           contCol++;
           if(contCol > 1) return 0;
         }
