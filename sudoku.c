@@ -64,7 +64,7 @@ int is_valid(Node* n){
         }
 
         int filaSubMatrix = (i / 3) * 3 + m / 3;
-        int colSubMatrix = (1 % 3) * 3 + m% 3
+        int colSubMatrix = (1 % 3) * 3 + m % 3;
 
         if(n->sudo[filaSubMatrix][colSubMatrix] == k){
           contSubMatrix++;
