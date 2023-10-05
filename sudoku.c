@@ -45,9 +45,9 @@ void print_node(Node* n){
 
 int is_valid(Node* n){
 
-  int validarFila[9][10] = 0;
-  int validarCol[9][10] = 0;
-  int validarSubMatrix[9][10] = 0;
+  int validarFila[9][10] = {0};
+  int validarCol[9][10] = {0};
+  int validarSubMatrix[9][10] = {0};
 
   for(int i = 0 ; i < 9 ; i++){
     for(int k = 0 ; k < 9 ; k++){
@@ -61,7 +61,7 @@ int is_valid(Node* n){
       if(validarCol[k][currentNum] == 1)return 0;
       validarCol[k][currentNum] = 1;
 
-      int subMatrix = 3 * (i / 3) + (k / 3)
+      int subMatrix = 3 * (i / 3) + (k / 3);
 
       if(validarSubMatrix[subMatrix][currentNum] == 1) return 0;
 
