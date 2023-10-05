@@ -2,3 +2,17 @@ Thu 05 Oct 2023 12:43:45 AM UTC:
  tests:  0|5
 total_score: 0/70
 b3e9fe4
+Thu 05 Oct 2023 04:53:26 PM UTC: 
+ sudoku.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_final’:
+sudoku.c:59:11: error: expected identifier or ‘(’ before numeric constant
+   59 |   for(int 1 = 0 ; i < 9 ; i++){
+      |           ^
+sudoku.c:59:19: error: ‘i’ undeclared (first use in this function)
+   59 |   for(int 1 = 0 ; i < 9 ; i++){
+      |                   ^
+sudoku.c:59:19: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+d7b42b8
