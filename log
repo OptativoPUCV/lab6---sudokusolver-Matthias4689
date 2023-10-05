@@ -85,3 +85,26 @@ Thu 05 Oct 2023 05:44:29 PM UTC:
  tests:  1|4
 total_score: 10/70
 81a808b
+Thu 05 Oct 2023 06:15:56 PM UTC: 
+ sudoku.c | 33 ++++++++++++++-------------------
+ 1 file changed, 14 insertions(+), 19 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:48:28: error: invalid initializer
+   48 |   int validarFila[9][10] = 0;
+      |                            ^
+sudoku.c:49:27: error: invalid initializer
+   49 |   int validarCol[9][10] = 0;
+      |                           ^
+sudoku.c:50:33: error: invalid initializer
+   50 |   int validarSubMatrix[9][10] = 0;
+      |                                 ^
+sudoku.c:66:7: error: expected ‘,’ or ‘;’ before ‘if’
+   66 |       if(validarSubMatrix[subMatrix][currentNum] == 1) return 0;
+      |       ^~
+sudoku.c:50:7: error: variable ‘validarSubMatrix’ set but not used [-Werror=unused-but-set-variable]
+   50 |   int validarSubMatrix[9][10] = 0;
+      |       ^~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+6971a38

@@ -44,37 +44,32 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
-  
+
+  int validarFila[9][10] = 0;
+  int validarCol[9][10] = 0;
+  int validarSubMatrix[9][10] = 0;
+
   for(int i = 0 ; i < 9 ; i++){
     for(int k = 0 ; k < 9 ; k++){
-      int contFilas = 0;
-      int contCol = 0;
-      int contSubMatrix = 0;
+      int currentNum = n->sudo[i][k];
 
-      for(int m = 0 ; m < 9 ; m++){
+      if(currentNum == 0) continue;
 
-        if(n->sudo[i][m] == k){
-          contFilas++;
-          if(contFilas > 1) return 0;
-        }
+      if(validarFila[i][currentNum] == 1) return 0;
+      validarFila[i][currentNum] = 1;
 
-        if(n->sudo[m][i] == k){
-          contCol++;
-          if(contCol > 1) return 0;
-        }
+      if(validarCol[k][currentNum] == 1)return 0;
+      validarCol[k][currentNum] = 1;
 
-        int filaSubMatrix = (i / 3) * 3 + m / 3;
-        int colSubMatrix = (i % 3) * 3 + m % 3;
+      int subMatrix = 3 * (i / 3) + (k / 3)
 
-        if(n->sudo[filaSubMatrix][colSubMatrix] == k){
-          contSubMatrix++;
-          if(contSubMatrix > 1) return 0;
-        }
-      }
+      if(validarSubMatrix[subMatrix][currentNum] == 1) return 0;
+
+      validarSubMatrix[subMatrix][currentNum] = 1;
     }
-  } 
-
-    return 1;
+  }
+  
+  return 1;
 }
 
 
