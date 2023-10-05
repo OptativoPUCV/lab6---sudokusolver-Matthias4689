@@ -49,7 +49,7 @@ int is_valid(Node* n){
     for(int k = 0 ; k < 9 ; k++){
       int contFilas = 0;
       int contCol = 0;
-      int contSubMatrix = o;
+      int contSubMatrix = 0;
 
       for(int m = 0 ; m < 9 ; m++){
 
@@ -63,7 +63,7 @@ int is_valid(Node* n){
           if(contCol > 1) return 0;
         }
 
-        int filaSubMatrix (i / 3) * 3 + m / 3;
+        int filaSubMatrix = (i / 3) * 3 + m / 3;
         int colSubMatrix = (1 % 3) * 3 + m% 3
 
         if(n->sudo[filaSubMatrix][colSubMatrix] == k){
