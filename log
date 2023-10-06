@@ -144,3 +144,27 @@ sudoku.c:95:30: error: expected ‘;’ before ‘:’ token
 cc1: all warnings being treated as errors
 Compilation failed
 aff6e73
+Fri 06 Oct 2023 11:20:28 PM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:83:10: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+   83 |       if(n->sudo[i][k] = 0){
+      |          ^
+sudoku.c:87:41: error: ‘filla’ undeclared (first use in this function); did you mean ‘fila’?
+   87 |           for(int fila = 0 ; fila < 9 ; filla++){
+      |                                         ^~~~~
+      |                                         fila
+sudoku.c:87:41: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:95:16: error: implicit declaration of function ‘frree’; did you mean ‘free’? [-Werror=implicit-function-declaration]
+   95 |           else frree(newNode):
+      |                ^~~~~
+      |                free
+sudoku.c:95:30: error: expected ‘;’ before ‘:’ token
+   95 |           else frree(newNode):
+      |                              ^
+      |                              ;
+cc1: all warnings being treated as errors
+Compilation failed
+3ded69c
