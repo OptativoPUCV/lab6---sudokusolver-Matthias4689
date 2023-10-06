@@ -84,7 +84,7 @@ List *get_adj_nodes(Node *n) {
         for (int num = 1 ; num <= 9 ; num++){
           Node* newNode = createNode();
 
-          for(int fila = 0 ; fila < 9 ; filla++){
+          for(int fila = 0 ; fila < 9 ; fila++){
             for(int col = 0 ; col < 9 ; col++){
               newNode->sudo[fila][col] = n->sudo[fila][col];
             }
