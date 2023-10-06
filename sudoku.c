@@ -92,7 +92,7 @@ List *get_adj_nodes(Node *n) {
           newNode->sudo[i][k] = num;
 
           if(is_valid(newNode)) pushBack(list, newNode);
-          else frree(newNode);
+          else free(newNode);
         }
         break;
       }

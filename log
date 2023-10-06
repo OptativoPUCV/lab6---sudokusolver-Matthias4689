@@ -202,3 +202,14 @@ sudoku.c:95:16: error: implicit declaration of function ‘frree’; did you mea
 cc1: all warnings being treated as errors
 Compilation failed
 3fb0b14
+Fri 06 Oct 2023 11:21:01 PM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:83:10: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+   83 |       if(n->sudo[i][k] = 0){
+      |          ^
+cc1: all warnings being treated as errors
+Compilation failed
+7e295fa
