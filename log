@@ -114,3 +114,33 @@ Thu 05 Oct 2023 06:16:31 PM UTC:
  tests:  4|3
 total_score: 30/70
 0f34dda
+Fri 06 Oct 2023 11:20:05 PM UTC: 
+ sudoku.c | 47 +++++++++++++++++++++++++++++++++--------------
+ 1 file changed, 33 insertions(+), 14 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:83:10: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+   83 |       if(n->sudo[i][k] = 0){
+      |          ^
+sudoku.c:87:41: error: ‘filla’ undeclared (first use in this function); did you mean ‘fila’?
+   87 |           for(int fila = 0 ; fila < 9 ; filla++){
+      |                                         ^~~~~
+      |                                         fila
+sudoku.c:87:41: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:89:60: error: expected ‘;’ before ‘}’ token
+   89 |               newNode->sudo[fila][col] = n->sudo[fila][col]
+      |                                                            ^
+      |                                                            ;
+   90 |             }
+      |             ~                                               
+sudoku.c:95:16: error: implicit declaration of function ‘frree’; did you mean ‘free’? [-Werror=implicit-function-declaration]
+   95 |           else frree(newNode):
+      |                ^~~~~
+      |                free
+sudoku.c:95:30: error: expected ‘;’ before ‘:’ token
+   95 |           else frree(newNode):
+      |                              ^
+      |                              ;
+cc1: all warnings being treated as errors
+Compilation failed
+aff6e73
