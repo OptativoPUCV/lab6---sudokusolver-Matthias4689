@@ -51,23 +51,16 @@ int is_valid(Node *n) {
   for (int i = 0; i < 9; i++) {
     for (int k = 0; k < 9; k++) {
       int currentNum = n->sudo[i][k];
+      if (currentNum == 0) continue;
 
-      if (currentNum == 0)
-        continue;
-
-      if (validarFila[i][currentNum] == 1)
-        return 0;
+      if (validarFila[i][currentNum] == 1) return 0;
       validarFila[i][currentNum] = 1;
 
-      if (validarCol[k][currentNum] == 1)
-        return 0;
+      if (validarCol[k][currentNum] == 1) return 0;
       validarCol[k][currentNum] = 1;
 
       int subMatrix = 3 * (i / 3) + (k / 3);
-
-      if (validarSubMatrix[subMatrix][currentNum] == 1)
-        return 0;
-
+      if (validarSubMatrix[subMatrix][currentNum] == 1) return 0;
       validarSubMatrix[subMatrix][currentNum] = 1;
     }
   }
