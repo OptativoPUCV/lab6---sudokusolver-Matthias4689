@@ -106,7 +106,7 @@ int is_final(Node *n) {
 }
 
 Node *DFS(Node *initial, int *cont) { 
-  
+ /* 
   Stack* S = createStack();
   push(S, initial);
 
@@ -127,7 +127,7 @@ Node *DFS(Node *initial, int *cont) {
     }
     clean(adjNodes);
   }
-  
+  */
   return NULL; 
 }
 
