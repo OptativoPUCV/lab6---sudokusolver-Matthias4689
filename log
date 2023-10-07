@@ -354,3 +354,13 @@ sudoku.c:125:20: error: expected ‘;’ before ‘nn’
       |                    ;
 Compilation failed
 98fcece
+Sat 07 Oct 2023 01:02:37 AM UTC: 
+ sudoku.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:114:25: error: invalid use of void expression
+  114 |     Node* currentNode = (Node*)pop(S);
+      |                         ^
+Compilation failed
+a6c56e2
