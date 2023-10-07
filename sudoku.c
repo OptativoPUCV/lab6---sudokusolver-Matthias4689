@@ -111,7 +111,7 @@ Node *DFS(Node *initial, int *cont) {
   push(S, initial);
 
   while(!is_empty(S)){
-    Node* currentNode = pop(s);
+    Node* currentNode = pop(S);
     (*cont)++;
 
     if(is_final(currentNode)) return currentNode;
@@ -120,7 +120,7 @@ Node *DFS(Node *initial, int *cont) {
     Node* aux = first(adjNodes);
     while (aux) {
       push(S, aux);
-      aux = next(adjNodes)
+      aux = next(adjNodes);
     }
   }
   

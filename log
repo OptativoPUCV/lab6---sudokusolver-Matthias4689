@@ -320,3 +320,13 @@ sudoku.c:123:27: error: expected ‘;’ before ‘}’ token
       |     ~                      
 Compilation failed
 8788afe
+Sat 07 Oct 2023 12:46:58 AM UTC: 
+ sudoku.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:114:25: error: void value not ignored as it ought to be
+  114 |     Node* currentNode = pop(S);
+      |                         ^~~
+Compilation failed
+34b9f35
