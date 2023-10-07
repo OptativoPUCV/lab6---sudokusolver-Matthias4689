@@ -70,27 +70,21 @@ int is_valid(Node *n) {
 
 List *get_adj_nodes(Node *n) {
   List *list = createList();
-  int fila = -1 , col = -1;
-  
+
   for(int i = 0 ; i < 9 ; i++){
     for(int k = 0 ; k < 9 ; k++){
       if(n->sudo[i][k] == 0){
-        fila = i, col = k;
-        
         for (int num = 1 ; num <= 9 ; num++){
           Node* newNode = copy(n);
-          newNode->sudo[fila][col] = num;
+          newNode->sudo[i][k] = num;
         
           if(is_valid(newNode)) pushBack(list, newNode);
           else free(newNode);
         }
-
-        fila = -1, col = -1;
+        return list;
       }
     }
   }
-  if (fila == -1 || col == -1) return list;
-  
   return list;
 }
 
