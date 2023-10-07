@@ -111,8 +111,11 @@ Node *DFS(Node *initial, int *cont) {
   push(S, initial);
 
   while(!is_empty(S)){
-    Node* currentNode = (Node*)pop(S);
     (*cont)++;
+    
+    Node* currentNode = top(S);
+    pop(S);
+
 
     if(is_final(currentNode)) return currentNode;
 
