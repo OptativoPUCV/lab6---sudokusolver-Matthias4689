@@ -303,3 +303,20 @@ Sat 07 Oct 2023 12:44:38 AM UTC:
  tests:  6|2
 total_score: 45/70
 3c986bd
+Sat 07 Oct 2023 12:46:43 AM UTC: 
+ sudoku.c | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:114:29: error: ‘s’ undeclared (first use in this function)
+  114 |     Node* currentNode = pop(s);
+      |                             ^
+sudoku.c:114:29: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:123:27: error: expected ‘;’ before ‘}’ token
+  123 |       aux = next(adjNodes)
+      |                           ^
+      |                           ;
+  124 |     }
+      |     ~                      
+Compilation failed
+8788afe
