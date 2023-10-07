@@ -340,3 +340,17 @@ sudoku.c:114:25: error: void value not ignored as it ought to be
       |                         ^~~
 Compilation failed
 a647663
+Sat 07 Oct 2023 12:59:02 AM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:114:25: error: void value not ignored as it ought to be
+  114 |     Node* currentNode = pop(S);
+      |                         ^~~
+sudoku.c:125:20: error: expected ‘;’ before ‘nn’
+  125 |     clean(adjNodes)nn
+      |                    ^~
+      |                    ;
+Compilation failed
+98fcece
