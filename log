@@ -219,3 +219,51 @@ Fri 06 Oct 2023 11:24:57 PM UTC:
  tests:  6|2
 total_score: 45/70
 6b22966
+Sat 07 Oct 2023 12:42:07 AM UTC: 
+ sudoku.c | 27 ++++++++++++++++++++-------
+ 1 file changed, 20 insertions(+), 7 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:85:17: error: unused variable ‘newNode’ [-Werror=unused-variable]
+   85 |           Node* newNode = copy(n);
+      |                 ^~~~~~~
+sudoku.c:87:11: error: ‘newNode’ undeclared (first use in this function); did you mean ‘Node’?
+   87 |           newNode->sudo[i][k] = num;
+      |           ^~~~~~~
+      |           Node
+sudoku.c:87:11: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:87:33: error: ‘num’ undeclared (first use in this function)
+   87 |           newNode->sudo[i][k] = num;
+      |                                 ^~~
+sudoku.c: At top level:
+sudoku.c:96:3: error: expected identifier or ‘(’ before ‘return’
+   96 |   return list;
+      |   ^~~~~~
+sudoku.c:97:1: error: expected identifier or ‘(’ before ‘}’ token
+   97 | }
+      | ^
+sudoku.c: In function ‘DFS’:
+sudoku.c:114:29: error: ‘s’ undeclared (first use in this function)
+  114 |     Node* currentNode = pop(s);
+      |                             ^
+sudoku.c:122:7: error: too few arguments to function ‘push’
+  122 |       push()
+      |       ^~~~
+In file included from test.c:4:
+list.h:33:6: note: declared here
+   33 | void push(Stack* s, void* data);
+      |      ^~~~
+In file included from test.c:5:
+sudoku.c:122:13: error: expected ‘;’ before ‘}’ token
+  122 |       push()
+      |             ^
+      |             ;
+  123 |     }
+      |     ~        
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:95:3: error: control reaches end of non-void function [-Werror=return-type]
+   95 |   }
+      |   ^
+cc1: all warnings being treated as errors
+Compilation failed
+ccfa93e

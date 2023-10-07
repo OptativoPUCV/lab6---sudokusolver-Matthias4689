@@ -82,12 +82,7 @@ List *get_adj_nodes(Node *n) {
     for(int k = 0 ; k < 9 ; k++){
       if(n->sudo[i][k] == 0){
         for (int num = 1 ; num <= 9 ; num++){
-          Node* newNode = createNode();
-
-          for(int fila = 0 ; fila < 9 ; fila++){
-            for(int col = 0 ; col < 9 ; col++){
-              newNode->sudo[fila][col] = n->sudo[fila][col];
-            }
+          Node* newNode = copy(n);
           }
           newNode->sudo[i][k] = num;
 
@@ -111,7 +106,25 @@ int is_final(Node *n) {
   return 1;
 }
 
-Node *DFS(Node *initial, int *cont) { return NULL; }
+Node *DFS(Node *initial, int *cont) { 
+  Stack* S = createStack();
+  push(S, initial);
+
+  while(!is_empty(S)){
+    Node* currentNode = pop(s);
+    (*cont)++;
+
+    if(is_final(currentNode)) return currentNode;
+
+    List* adjNodes = get_adj_nodes(currentNode);
+    Node* aux = first(adjNodes);
+    while (aux) {
+      push()
+    }
+  }
+  
+  return NULL; 
+}
 
 /*
 int main( int argc, char *argv[] ){
