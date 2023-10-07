@@ -89,7 +89,7 @@ List *get_adj_nodes(Node *n) {
       }
     }
   }
-  //if (fila == -1 || col == -1) return list;
+  if (fila == -1 || col == -1) return list;
   
   return list;
 }
